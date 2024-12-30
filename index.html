@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Project and Solutions</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #dev{
+            margin-left: 70%;
+        }
+        #dev, #cont, #serv {
+            flex-basis: 10%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; /* Needed for dropdown positioning */
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: aqua;
+            padding: 10px 10px;
+        }
+        #con {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            animation: changeBackground 20s linear infinite;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin-top: 4.6%;
+        }
+        @keyframes changeBackground {
+            0% {
+                background-image: url("images.jfif");
+            }
+            20% {
+                background-image: url("images (1).jfif");
+            }
+            40% {
+                background-image: url("images (2).jfif");
+            }
+            60% {
+                background-image: url("images (3).jfif");
+            }
+            80% {
+                background-image: url("images (5).jfif");
+            }
+            100% {
+                background-image: url("images.jfif");
+            }
+        }
+        .back {
+            margin-top: 5%;
+            margin-left: 10%;
+        }
+
+        #main {
+            max-width: 100%;
+        }
+        #hea {
+            background-color: lightslategray;
+            display: flex;
+            text-align: center;
+            max-width: 150%;
+        }
+        #foo {
+            background-color: rgba(114, 23, 23, 0.5);
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            max-width: 110%;
+        }
+        #about {
+            margin-top: 10px;
+        }
+        strong {
+            color: black;
+        }
+        #drop, #drop-dev, #drop-cont {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Aligns below the link */
+            left: 0;
+            background-color: white; /* Background color for dropdown */
+            border: 1px solid lightslategray;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for aesthetics */
+            z-index: 10; /* Ensures it appears above other content */
+            min-width: 150px;
+        }
+        #drop a, #drop-dev a, #drop-cont a {
+            display: block; /* Makes each link a block for proper alignment */
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        #drop a:hover, #drop-dev a:hover, #drop-cont a:hover {
+            background-color: lightgray; /* Highlights link on hover */
+        }
+        #serv:hover #drop {
+            display: block; /* Makes dropdown visible on hover for Services */
+        }
+        #dev:hover #drop-dev {
+            display: block; /* Makes dropdown visible on hover for Developers */
+        }
+        #cont:hover #drop-cont {
+            display: block; /* Makes dropdown visible on hover for Contacts */
+        }
+        @media (max-width: 760px) {
+            #dev{
+                margin-left: 10%;
+            #con {
+                margin-top: 12%;
+            }
+            .back {
+                margin-top: 8%;
+                max-width: 80%;
+            }
+            #foo {
+                padding: 20px 0;
+                min-width: 10%;
+            }
+            #hea {
+                padding: 0px 0px 0px 60px;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            #dev{
+                margin-left: 0%;
+            #con {
+                margin-top: 12%;
+            }
+            .back {
+                margin-top: 8%;
+                max-width: 80%;
+            }
+            #foo {
+                padding: 20px 0;
+                min-width: 10%;
+            }
+            #hea {
+                padding: 0px 15px 0px 60px;
+                max-width: 110%;
+                background-color: lightslategray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="hea">
+            <div id="dev">
+                <strong>Developers</strong>
+                <div id="drop-dev">
+                    <a href="https://siye1234.github.io/portfolio/" target="_blank">Lead Developer</a>
+                    <a href="http://">Option 2</a>
+                    <a href="http://">Option 3</a>
+                </div>
+            </div>
+            <div id="serv">
+                <strong>Services</strong>
+                <div id="drop">
+                    <a href="http://">Option 1</a>
+                    <a href="http://">Option 2</a>
+                    <a href="http://">Option 3</a>
+                </div>
+            </div>
+            <div id="cont">
+                <strong>Contacts</strong>
+                <div id="drop-cont">
+                    <a href="http://">EMAIL</a>
+                    <a href="http://">WHATSUPP</a>
+                    <a href="http://">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+        <div id="con">
+            <div class="back">
+                <strong>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Quasi fugiat nulla hic ab voluptatum. Nobis, <br>iure commodi aspernatur nesciunt non, <br>
+                fugit consequatur ab beatae molestiae culpa nam odit in dolor. <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Quasi fugiat nulla hic ab voluptatum. Nobis, <br>iure commodi aspernatur nesciunt non, <br>
+                fugit consequatur ab beatae molestiae culpa nam odit in dolor. <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Quasi fugiat nulla hic ab voluptatum. Nobis, <br>iure commodi aspernatur nesciunt non, <br>
+                fugit consequatur ab beatae molestiae culpa nam odit in dolor. <br>
+            </strong>
+            </div>
+        </div>
+        <div id="foo">
+            <div id="about"><a href="http://"><strong>About Us</strong></a></div>
+        </div>
+    </div>
+</body>
+</html>
